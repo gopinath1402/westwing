@@ -1,8 +1,6 @@
-FROM ubuntu
+FROM  mysql/mysql-server
 
 ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update -qq && apt-get install -y mysql-server-5.7
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 
